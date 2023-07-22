@@ -21,16 +21,23 @@ func main() {
 
 	listenAddr := ":8080"
 	router := mux.NewRouter()
+
+	// Standard Routers
 	AccountRouter := router.PathPrefix("/accounts").Subrouter()
-	PrivateAccountRouter := router.PathPrefix("/accounts").Subrouter()
 	MerchantAccountRouter := router.PathPrefix("/accounts/merchants").Subrouter()
+
+	// Private Routers
+	PrivateAccountRouter := router.PathPrefix("/accounts").Subrouter()
 	PrivateMerchantAccountRouter := router.PathPrefix("/accounts/merchants").Subrouter()
 
+	// Standard Middleware
 	router.Use(mw.Logger)
 
+	// Private Middleware
 	PrivateAccountRouter.Use(mw.AuthMiddleware)
 	PrivateMerchantAccountRouter.Use(mw.AuthMiddleware)
 
+	// Connect to db
 	if err := sqldb.Connect(); err != nil {
 		log.Fatal("error connecting to db", err.Error())
 	}
