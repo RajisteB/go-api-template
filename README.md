@@ -1,7 +1,7 @@
 ![Golang gopher image](https://miro.medium.com/v2/resize:fit:256/1*cWqak8OijbTerY420wRgNQ.png)
 # **Go API Template**
 
-Quick start basic api template in Go!
+Quickstart basic API template in Go!
 
 ## Requirements
 
