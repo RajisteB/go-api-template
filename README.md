@@ -35,8 +35,9 @@ MAILGUN_BASE_URL=        <mailgun baseurl>
 DOMAIN=                  <mailgun domain>
 JWT_SECRET=              <jwt secret>
 ```
-3. Run `make migrate-up` to run migrations
-4. Run `make run` to start the app
+3. Run `go get` to start downloading the necessary modules
+4. Run `make migrate-up` to run migrations
+5. Run `make run` to build and start the app
 
 [^1]: Work in progress, estimated completion August 2024.
 [^2]: Work in progress, estimated completion September 2024.
