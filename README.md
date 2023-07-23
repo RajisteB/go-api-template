@@ -3,6 +3,19 @@
 
 Quick start basic api template in Go!
 
+## Requirements
+
+#### Postgres (Local)
+- Minimum of a local running instance of a postgres database. 
+[Download and install Postgres](https://www.postgresql.org/download/)
+
+#### Make for Makefiles
+- MacOS users can install make by running `xcode-select --install`
+
+- Linux/Ubuntu users can install make by running `sudo apt-get install build-essential`
+
+- Windows users can install make by following Evan Will's instructions [here](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058)
+
 ## Features
 
 - JWT Auth
